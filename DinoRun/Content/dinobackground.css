@@ -1,0 +1,40 @@
+﻿body {
+}
+
+.game-body {
+	transition:filter 1.5s cubic-bezier(0.65, 0.05, 0.36, 1), 3 background-color 1.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+	/*告诉浏览器即将对某元素执行什么动画，这样浏览器可以提前进行准备来优化动画效果，使动画更为流畅*/
+	will-change: filter,background-color;	
+}
+
+.inverted {
+	 filter: invert(100%); /*反色*/
+	 background-color: #000; /*改变背景为黑色(入夜效果)*/
+}
+
+#offline-resources {
+	display: none;
+}
+
+.runner-container {
+	height: 150px;
+	max-width: 600px;
+	overflow: hidden;
+	opacity: 1;
+}
+
+#c {
+	height: 150px;
+	max-width: 600px;
+	opacity: 1;
+}
+
+.offline {
+	transition: -webkit-filter 1.5s cubic-bezier(0.65, 0.05, 0.36, 1), background-color 1.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+	will-change: -webkit-filter, background-color;
+}
+
+	.offline.inverted {
+		-webkit-filter: invert(100%);
+		background-color: #000;
+	}
